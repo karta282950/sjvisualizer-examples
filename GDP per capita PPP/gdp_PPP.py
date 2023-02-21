@@ -2,7 +2,7 @@ from sjvisualizer import Canvas
 from sjvisualizer import DataHandler
 from sjvisualizer import BarRace
 from sjvisualizer import Date
-from sjvisualizer import StaticText
+#from sjvisualizer import StaticText
 import time
 import json
 
@@ -25,8 +25,9 @@ def main(duration = 1.0, fps = 60):
     date = Date.date(canvas=canvas.canvas, df=df, time_indicator="year", width=0, height=150, x_pos=1200, y_pos=1200, font_color=(100,100,100))
     canvas.add_sub_plot(date)
 
-    title = StaticText.static_text(canvas=canvas.canvas, text="GDP per Capita (PPP)", width=0, height=100, anchor="c", x_pos=1440/2, y_pos=50)
-    canvas.add_sub_plot(title)
+    #title = StaticText.static_text(canvas=canvas.canvas, text="GDP per Capita (PPP)", width=0, height=100, anchor="c", x_pos=1440/2, y_pos=50)
+    #title = canvas.add_title("GDP per Capita (PPP)", color=(0,0,0))
+    #canvas.add_sub_plot(title)
 
     canvas.play(fps=fps)
 
